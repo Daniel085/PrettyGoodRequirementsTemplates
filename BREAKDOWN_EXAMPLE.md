@@ -1,6 +1,6 @@
 # Example: Breaking Down WhatsApp Business API Integration Project
 
-This document demonstrates how to use the templates and AI Assistant Guide to break down the example Project into Epics, Stories, and Tasks.
+This document demonstrates how to use the templates and AI Assistant Guide to break down the example Project into Capabilities, Epics, Stories, and Tasks.
 
 ---
 
@@ -10,15 +10,15 @@ See [PROJECT_TEMPLATE.md - Example Project](templates/PROJECT_TEMPLATE.md#exampl
 
 ---
 
-## Step 1: Identify Functional Areas and Create Epics
+## Step 1: Identify Functional Areas and Create Capabilities
 
-After reading the Project document, we identify work for all four functional teams:
+After reading the Project document, we identify work for all four functional teams. Each team gets one Capability representing their complete contribution to the Project.
 
-### Epic 1: Backend - WhatsApp Messaging API Backend
+### Capability 1: Backend - WhatsApp Messaging API Backend
 **Team**: Backend
-**Scope**: Build the public API and Meta WhatsApp integration
-**Story Points**: 55
-**Sprints**: 12-16
+**Scope**: Build the complete backend public API and Meta WhatsApp integration
+**Duration**: Q2-Q3 2025 (spans 2 quarters)
+**Total Story Points**: 89
 
 **Key Deliverables:**
 - REST API for sending WhatsApp messages
@@ -28,18 +28,22 @@ After reading the Project document, we identify work for all four functional tea
 - Message logging and history
 
 **Dependencies:**
-- **Needs**: Billing team's usage event schema (Sprint 12 Week 1)
+- **Needs**: Billing team's usage event schema (Q2 Week 1)
 - **Blocks**: Frontend UI, Billing usage tracking
 
-See full Epic: [EPIC_TEMPLATE.md - Example Epic](templates/EPIC_TEMPLATE.md#example-epic)
+**Epics within this Capability:**
+- Epic 1.1: WhatsApp Core Messaging (Q2 2025) - 55 points
+- Epic 1.2: WhatsApp Advanced Features (Q3 2025) - 34 points
+
+See full Capability: [CAPABILITY_TEMPLATE.md - Example Capability](templates/CAPABILITY_TEMPLATE.md#example-capability)
 
 ---
 
-### Epic 2: Frontend - WhatsApp Developer Portal UI
+### Capability 2: Frontend - WhatsApp Developer Portal UI
 **Team**: Frontend
-**Scope**: Build developer portal UI for WhatsApp management
-**Story Points**: 34
-**Sprints**: 13-17
+**Scope**: Build complete developer portal UI for WhatsApp management
+**Duration**: Q2-Q3 2025
+**Total Story Points**: 47
 
 **Key Deliverables:**
 - WhatsApp message logs dashboard
@@ -49,16 +53,20 @@ See full Epic: [EPIC_TEMPLATE.md - Example Epic](templates/EPIC_TEMPLATE.md#exam
 - Configuration and settings UI
 
 **Dependencies:**
-- **Needs**: Backend API endpoints (Sprint 13 Week 2)
+- **Needs**: Backend API endpoints (Q2 Week 6)
 - **Blocks**: User acceptance testing
+
+**Epics within this Capability:**
+- Epic 2.1: Basic WhatsApp UI Components (Q2 2025) - 34 points
+- Epic 2.2: Advanced WhatsApp UI Features (Q3 2025) - 13 points
 
 ---
 
-### Epic 3: Billing - WhatsApp Usage Tracking and Billing
+### Capability 3: Billing - WhatsApp Usage Tracking and Billing
 **Team**: Billing
 **Scope**: Track WhatsApp usage and calculate billing
-**Story Points**: 21
-**Sprints**: 13-16
+**Duration**: Q2-Q3 2025
+**Total Story Points**: 29
 
 **Key Deliverables:**
 - Usage event ingestion from Kafka
@@ -68,16 +76,20 @@ See full Epic: [EPIC_TEMPLATE.md - Example Epic](templates/EPIC_TEMPLATE.md#exam
 - Pricing model implementation
 
 **Dependencies:**
-- **Needs**: Backend usage events (Sprint 13)
+- **Needs**: Backend usage events (Q2 Week 4)
 - **Blocks**: Revenue recognition, customer invoicing
+
+**Epics within this Capability:**
+- Epic 3.1: WhatsApp Usage Tracking (Q2 2025) - 21 points
+- Epic 3.2: Advanced Billing Features (Q3 2025) - 8 points
 
 ---
 
-### Epic 4: Testing - WhatsApp Integration Testing and QA
+### Capability 4: Testing - WhatsApp Integration Testing and QA
 **Team**: Testing
 **Scope**: Comprehensive testing across all components
-**Story Points**: 21
-**Sprints**: 14-16
+**Duration**: Q2-Q3 2025
+**Total Story Points**: 29
 
 **Key Deliverables:**
 - End-to-end test automation
@@ -87,14 +99,38 @@ See full Epic: [EPIC_TEMPLATE.md - Example Epic](templates/EPIC_TEMPLATE.md#exam
 - Regression test suite
 
 **Dependencies:**
-- **Needs**: Backend API and Frontend UI in staging (Sprint 15 Week 2)
+- **Needs**: Backend API and Frontend UI in staging (Q2 Week 10)
 - **Blocks**: Production launch
+
+**Epics within this Capability:**
+- Epic 4.1: WhatsApp Core Testing (Q2 2025) - 21 points
+- Epic 4.2: Advanced Testing and Optimization (Q3 2025) - 8 points
 
 ---
 
-## Step 2: Break Down Epic into Stories
+## Step 2: Break Down Capability into Epics
 
-Let's demonstrate Story breakdown for **Epic 1: Backend - WhatsApp Messaging API Backend**
+Let's demonstrate Epic breakdown for **Capability 1: Backend - WhatsApp Messaging API Backend**
+
+### Epic 1.1: WhatsApp Core Messaging (Q2 2025)
+**Business Value**: Developers can send/receive basic WhatsApp messages
+**Story Points**: 55
+**Duration**: 12 weeks
+
+**Key Deliverables:**
+- Text message send API
+- Media message send API
+- Inbound message webhook delivery
+- Basic template messaging
+- Usage event capture
+
+See full Epic: [EPIC_TEMPLATE.md - Example Epic](templates/EPIC_TEMPLATE.md#example-epic)
+
+---
+
+## Step 3: Break Down Epic into Stories
+
+Let's demonstrate Story breakdown for **Epic 1.1: WhatsApp Core Messaging**
 
 ### Story 1: Set Up WhatsApp Database Schema
 **Story Points**: 3
@@ -300,55 +336,72 @@ See full Task example: [TASK_TEMPLATE.md - Example Task](templates/TASK_TEMPLATE
 ```
 Project: WhatsApp Business API Integration
 │
-├── Epic 1: Backend - WhatsApp Messaging API Backend (Backend Team, 55 points)
-│   ├── Story 1: Set Up WhatsApp Database Schema (3 points)
-│   │   ├── Task: Create whatsapp_messages table migration
-│   │   ├── Task: Create whatsapp_templates table migration
-│   │   ├── Task: Create whatsapp_phone_numbers table migration
-│   │   ├── Task: Write integration tests for schema
-│   │   └── Task: Document database schema
+├── Capability 1: Backend - WhatsApp Messaging API Backend (Backend Team, Q2-Q3 2025, 89 points)
+│   ├── Epic 1.1: WhatsApp Core Messaging (Q2 2025, 55 points)
+│   │   ├── Story 1.1.1: Set Up WhatsApp Database Schema (3 points)
+│   │   │   ├── Task: Create whatsapp_messages table migration
+│   │   │   ├── Task: Create whatsapp_templates table migration
+│   │   │   ├── Task: Create whatsapp_phone_numbers table migration
+│   │   │   ├── Task: Write integration tests for schema
+│   │   │   └── Task: Document database schema
+│   │   │
+│   │   ├── Story 1.1.2: Implement WhatsApp Text Message Send API (5 points)
+│   │   │   ├── Task: Create database migration for whatsapp_messages table
+│   │   │   ├── Task: Implement POST /v1/whatsapp/messages endpoint handler
+│   │   │   ├── Task: Add unit tests for message send endpoint
+│   │   │   ├── Task: Add integration test for end-to-end flow
+│   │   │   ├── Task: Update OpenAPI specification
+│   │   │   └── Task: Add Prometheus metrics for endpoint
+│   │   │
+│   │   ├── Story 1.1.3: Implement WhatsApp Message Background Processor (8 points)
+│   │   │   ├── Task: Create Kafka consumer for outbound messages
+│   │   │   ├── Task: Implement Meta WhatsApp API client wrapper
+│   │   │   ├── Task: Add retry logic with exponential backoff
+│   │   │   ├── Task: Implement usage event publishing to billing topic
+│   │   │   ├── Task: Add circuit breaker for Meta API
+│   │   │   ├── Task: Write unit tests for processor
+│   │   │   ├── Task: Write integration test with mock Meta API
+│   │   │   └── Task: Add monitoring and alerting
+│   │   │
+│   │   ├── Story 1.1.4: Implement WhatsApp Media Message Send API (5 points)
+│   │   ├── Story 1.1.5: Implement Inbound Message Webhook Delivery (8 points)
+│   │   ├── Story 1.1.6: Implement WhatsApp Template Message API (5 points)
+│   │   └── Story 1.1.7: Implement Message Status and History API (3 points)
 │   │
-│   ├── Story 2: Implement WhatsApp Text Message Send API (5 points)
-│   │   ├── Task: Create database migration for whatsapp_messages table
-│   │   ├── Task: Implement POST /v1/whatsapp/messages endpoint handler
-│   │   ├── Task: Add unit tests for message send endpoint
-│   │   ├── Task: Add integration test for end-to-end flow
-│   │   ├── Task: Update OpenAPI specification
-│   │   └── Task: Add Prometheus metrics for endpoint
+│   └── Epic 1.2: WhatsApp Advanced Features (Q3 2025, 34 points)
+│       ├── Story 1.2.1: Implement Interactive Messages (13 points)
+│       ├── Story 1.2.2: Implement Message Scheduling (13 points)
+│       └── Story 1.2.3: Add Advanced Analytics (8 points)
+│
+├── Capability 2: Frontend - WhatsApp Developer Portal UI (Frontend Team, Q2-Q3 2025, 47 points)
+│   ├── Epic 2.1: Basic WhatsApp UI Components (Q2 2025, 34 points)
+│   │   ├── Story 2.1.1: Create WhatsApp Message Logs Dashboard (8 points)
+│   │   ├── Story 2.1.2: Create WhatsApp Phone Number Registration UI (5 points)
+│   │   ├── Story 2.1.3: Create WhatsApp Configuration Settings Page (3 points)
+│   │   └── Story 2.1.4: Create WhatsApp API Documentation Pages (8 points)
 │   │
-│   ├── Story 3: Implement WhatsApp Message Background Processor (8 points)
-│   │   ├── Task: Create Kafka consumer for outbound messages
-│   │   ├── Task: Implement Meta WhatsApp API client wrapper
-│   │   ├── Task: Add retry logic with exponential backoff
-│   │   ├── Task: Implement usage event publishing to billing topic
-│   │   ├── Task: Add circuit breaker for Meta API
-│   │   ├── Task: Write unit tests for processor
-│   │   ├── Task: Write integration test with mock Meta API
-│   │   └── Task: Add monitoring and alerting
+│   └── Epic 2.2: Advanced WhatsApp UI Features (Q3 2025, 13 points)
+│       ├── Story 2.2.1: Create WhatsApp Template Management UI (8 points)
+│       └── Story 2.2.2: Add Advanced Analytics Dashboard (5 points)
+│
+├── Capability 3: Billing - WhatsApp Usage Tracking and Billing (Billing Team, Q2-Q3 2025, 29 points)
+│   ├── Epic 3.1: WhatsApp Usage Tracking (Q2 2025, 21 points)
+│   │   ├── Story 3.1.1: Implement WhatsApp Usage Event Ingestion (5 points)
+│   │   ├── Story 3.1.2: Implement WhatsApp Billing Calculations (8 points)
+│   │   ├── Story 3.1.3: Add WhatsApp Usage to Billing Dashboard (3 points)
+│   │   └── Story 3.1.4: Implement Usage-Based Rate Limiting (5 points)
 │   │
-│   ├── Story 4: Implement WhatsApp Media Message Send API (5 points)
-│   ├── Story 5: Implement Inbound Message Webhook Delivery (8 points)
-│   ├── Story 6: Implement WhatsApp Template Message API (5 points)
-│   └── Story 7: Implement Message Status and History API (3 points)
+│   └── Epic 3.2: Advanced Billing Features (Q3 2025, 8 points)
+│       └── Story 3.2.1: Implement Usage Analytics and Forecasting (8 points)
 │
-├── Epic 2: Frontend - WhatsApp Developer Portal UI (Frontend Team, 34 points)
-│   ├── Story: Create WhatsApp Message Logs Dashboard (8 points)
-│   ├── Story: Create WhatsApp Phone Number Registration UI (5 points)
-│   ├── Story: Create WhatsApp Template Management UI (5 points)
-│   ├── Story: Create WhatsApp Configuration Settings Page (3 points)
-│   ├── Story: Create WhatsApp API Documentation Pages (8 points)
-│   └── Story: Add WhatsApp Usage Visualization to Dashboard (5 points)
-│
-├── Epic 3: Billing - WhatsApp Usage Tracking and Billing (Billing Team, 21 points)
-│   ├── Story: Implement WhatsApp Usage Event Ingestion (5 points)
-│   ├── Story: Implement WhatsApp Billing Calculations (8 points)
-│   ├── Story: Add WhatsApp Usage to Billing Dashboard (3 points)
-│   └── Story: Implement Usage-Based Rate Limiting (5 points)
-│
-└── Epic 4: Testing - WhatsApp Integration Testing and QA (Testing Team, 21 points)
-    ├── Story: Create WhatsApp End-to-End Test Suite (8 points)
-    ├── Story: Perform WhatsApp Load Testing (8 points)
-    └── Story: Perform WhatsApp Security Testing (5 points)
+└── Capability 4: Testing - WhatsApp Integration Testing and QA (Testing Team, Q2-Q3 2025, 29 points)
+    ├── Epic 4.1: WhatsApp Core Testing (Q2 2025, 21 points)
+    │   ├── Story 4.1.1: Create WhatsApp End-to-End Test Suite (8 points)
+    │   ├── Story 4.1.2: Perform WhatsApp Load Testing (8 points)
+    │   └── Story 4.1.3: Perform WhatsApp Security Testing (5 points)
+    │
+    └── Epic 4.2: Advanced Testing and Optimization (Q3 2025, 8 points)
+        └── Story 4.2.1: Continuous Performance Monitoring (8 points)
 ```
 
 ---
@@ -357,13 +410,15 @@ Project: WhatsApp Business API Integration
 
 This example demonstrates:
 
-1. **Project → Epic**: Identified 4 Epics (one per functional team)
-2. **Epic → Story**: Broke down Backend Epic into 7 Stories
-3. **Story → Task**: Broke down Stories into 5-8 Tasks each
+1. **Project → Capability**: Identified 4 Capabilities (one per functional team)
+2. **Capability → Epic**: Broke down each Capability into 2 Epics (one per quarter)
+3. **Epic → Story**: Broke down Backend Epic into 7 Stories
+4. **Story → Task**: Broke down Stories into 5-8 Tasks each
 
 **Key Principles Applied:**
 
-- ✅ One Epic per functional team
+- ✅ One Capability per functional team (spanning multiple quarters)
+- ✅ Epics organized by quarter (up to 13 weeks each)
 - ✅ Stories follow INVEST criteria (Independent, Negotiable, Valuable, Estimable, Small, Testable)
 - ✅ Stories deliver user-facing value
 - ✅ Tasks are technical implementation steps
@@ -374,7 +429,7 @@ This example demonstrates:
 
 **What Makes This Breakdown Good:**
 
-1. **Clear ownership**: Each Epic/Story/Task has single team assignment
+1. **Clear ownership**: Each Capability/Epic/Story/Task has single team assignment
 2. **Right-sized**: Stories are 1-8 points, Tasks are 1-8 hours
 3. **Independent value**: Each Story can be demoed independently
 4. **Testable**: Clear acceptance criteria at each level

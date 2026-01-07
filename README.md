@@ -5,17 +5,18 @@ A comprehensive set of templates and guidelines for creating high-quality projec
 ## Overview
 
 This repository provides:
-- **Templates** for Projects, Epics, Stories, and Tasks
+- **Templates** for Projects, Capabilities, Epics, Stories, and Tasks
 - **AI Assistant Guide** to help break down work and assign it to appropriate teams
 - **Example Data** demonstrating real-world usage
 
 ## Template Hierarchy
 
 ```
-Project (Feature/Capability level)
-├── Epic (Team-level breakdown)
-│   ├── Story (Deliverable user value)
-│   │   └── Task (Technical implementation)
+Project (Large feature/initiative, multiple quarters)
+├── Capability (Team-specific work, multiple quarters)
+│   ├── Epic (Component of user/business value, up to 1 quarter)
+│   │   ├── Story (Deliverable increment, 1-5 days)
+│   │   │   └── Task (Implementation step, 1-8 hours)
 ```
 
 ## Templates
@@ -29,14 +30,17 @@ Highest level template following Amazon 1-pager format. Defines features and cap
 - Acceptance Criteria
 - Definition of Done
 
+### [Capability Template](templates/CAPABILITY_TEMPLATE.md)
+Team-specific work breakdown representing the complete contribution of a functional team to a Project. Can span multiple quarters and contains multiple Epics organized by quarter.
+
 ### [Epic Template](templates/EPIC_TEMPLATE.md)
-Team-level work breakdown. Each Epic represents a significant chunk of work for a specific functional team.
+Component of user or business-facing value that can be delivered within one quarter. Represents a significant milestone within a Capability.
 
 ### [Story Template](templates/STORY_TEMPLATE.md)
-User-focused deliverable that provides business value. Stories should be independently deliverable.
+User-focused deliverable that provides business value. Stories should be independently deliverable and completable in 1-5 days.
 
 ### [Task Template](templates/TASK_TEMPLATE.md)
-Technical implementation work. Tasks are the atomic units of work assigned to individual contributors.
+Technical implementation work. Tasks are the atomic units of work (1-8 hours) assigned to individual contributors.
 
 ## Team Structure
 
@@ -49,8 +53,9 @@ Our functional teams for a communications API platform (similar to Twilio):
 ## AI Assistant Guide
 
 See [AI_ASSISTANT_GUIDE.md](AI_ASSISTANT_GUIDE.md) for detailed instructions on:
-- Breaking down Projects into Epics
-- Decomposing Epics into Stories
+- Breaking down Projects into Capabilities
+- Decomposing Capabilities into Epics
+- Breaking down Epics into Stories
 - Creating Tasks from Stories
 - Assigning work to appropriate teams based on responsibilities
 
