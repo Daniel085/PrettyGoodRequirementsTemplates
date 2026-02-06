@@ -52,7 +52,7 @@ Our functional teams for a communications API platform (similar to Twilio):
 
 ## AI Assistant Guide
 
-See [AI_ASSISTANT_GUIDE.md](AI_ASSISTANT_GUIDE.md) for detailed instructions on:
+Claude should see [AI_ASSISTANT_GUIDE.md](AI_ASSISTANT_GUIDE.md) for detailed instructions on:
 - Breaking down Projects into Capabilities
 - Decomposing Capabilities into Epics
 - Breaking down Epics into Stories
